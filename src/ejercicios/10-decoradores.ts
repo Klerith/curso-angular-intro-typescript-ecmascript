@@ -1,25 +1,27 @@
 /*
     ===== Código de TypeScript =====
 */
-function decoradorClase<T extends {new (...args:any[]):{}}>( constructor: T ) {
+function classDecorator<T extends { new (...args: any[]): {} }>(
+    constructor: T
+  ) {
     return class extends constructor {
-        miSuperPropiedad = 'nueva propiedad desde el decorador';
-        saludo = 'Hola Mundo';
-    }
-}
+      newProperty = "new property";
+      hello = "override";
+    };
+  }
+  
 
-@decoradorClase
+
+@classDecorator
 class MiSuperClase {
+    public miPropiedad: string = 'ABC123';
 
-    imprimir(){
-        console.log('Imprimir fue llamado')
+    imprimir() {
+        console.log('Hola Mundo');
     }
 }
 
 
 console.log( MiSuperClase );
 
-// const nuevaInstancia = new MiSuperClase();
-
-// console.log(nuevaInstancia)
-
+const miClase = new MiSuperClase();
