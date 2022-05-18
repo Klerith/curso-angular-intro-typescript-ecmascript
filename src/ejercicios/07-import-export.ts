@@ -1,4 +1,6 @@
+import '../assets/css/style.css';
 import { Producto, calculaISV } from './06-desestructuracion-funcion';
+
 /*
     ===== Código de TypeScript =====
 */
@@ -14,9 +16,7 @@ const carritoCompras: Producto[] = [
     },
 ];
 
-const [total, isv] = calculaISV( carritoCompras );
+const [total, isv] = calculaISV(carritoCompras);
 
-console.log( 'Total', total );
-console.log( 'ISV', isv )
-
-
+console.log('Total', total);
+console.log('ISV', isv)

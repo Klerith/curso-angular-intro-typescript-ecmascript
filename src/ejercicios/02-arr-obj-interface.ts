@@ -1,8 +1,10 @@
+import '../assets/css/style.css';
+
 /*
     ===== Código de TypeScript =====
 */
 
-let habilidades: string[] = ['Bash','Counter', 'Healing'];
+let habilidades: string[] = ['Bash', 'Counter', 'Healing'];
 
 interface Personaje {
     nombre: string;
@@ -11,14 +13,12 @@ interface Personaje {
     puebloNatal?: string;
 }
 
-
 const personaje: Personaje = {
     nombre: 'Strider',
     hp: 100,
-    habilidades: ['Bash','Counter','Healing']
+    habilidades: ['Bash', 'Counter', 'Healing']
 }
 
 personaje.puebloNatal = 'Pueblo Paleta';
 
-
-console.table( personaje );
+console.table(personaje);
