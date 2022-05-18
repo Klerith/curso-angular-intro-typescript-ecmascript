@@ -2,16 +2,18 @@
   "name": "rxjs-dev",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "dependencies": {
-    "typescript": "^3.6.3",
-    "webpack": "^4.40.2",
-    "webpack-dev-server": "^3.8.1"
+    "typescript": "^4.6.4",
+    "webpack-dev-server": "^4.9.0"
   },
   "devDependencies": {
-    "ts-loader": "^6.1.2",
-    "css-loader": "^3.2.0",
-    "webpack-cli": "^3.3.9"
+    "csp-html-webpack-plugin": "^5.1.0",
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --port=8081"
